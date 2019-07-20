@@ -42,63 +42,63 @@
 ---
 
 **4. API 호출 방법**
- * JWT 발급 후 Header의 Authorization에 Token 값을 넣어서 API를 호출을 해야 함  
+1. JWT 발급 후 Header의 Authorization에 Token 값을 넣어서 API를 호출을 해야 함  
 
-  1. JWT signup 계정 생성 API
+2. JWT signup 계정 생성 API
     * POST /jwt/signUp
     * Content-Type: application/json
     * Body: { "userid":String, "password":String }  
    
-  2. JWT signin 로그인 API
+3. JWT signin 로그인 API
     * POST /jwt/signIn
     * Content-Type: application/json
     * Body: { "userid":String, "password":String }  
    
-  3. JWT refresh 토큰 재발급 API 
+4. JWT refresh 토큰 재발급 API 
     * POST /jwt/refresh
     * Content-Type: application/json
     * Header: Authorization: Bearer Token
     * Body: { "token":String }  
 
-  4. 데이터 파일에서 각 레코드를 데이터베이스에 저장하는 API 
+5.  데이터 파일에서 각 레코드를 데이터베이스에 저장하는 API 
     * POST /region/importCSV
     * Content-Type: multipart/form-data
     * Header: Authorization: token
     * Body: { "file":file } 
 
-  5. 생태 관광정보 지역 목록 조회 API 
+6. 생태 관광정보 지역 목록 조회 API 
     * GET /region
     * Header Authorization: token
 
-  6. 서비스 지역 코드를 기준으로 지역 조회 API 
+7. 서비스 지역 코드를 기준으로 지역 조회 API 
     * GET /region/{regionId}
     * Header: Authorization: token
 
-  7. 생태 관광정보 데이터 추가 API
+8. 생태 관광정보 데이터 추가 API
     * POST /program
     * Content-Type: application/json
     * Header: Authorization: token
     * Body: { "prgmDetails":String, "prgmIntro":String, "prgmName":String, "serviceRegion":String, "theme":String }
     
-  8. 생태 관광정보 데이터 수정 API
+9. 생태 관광정보 데이터 수정 API
     * PATCH /program/{programId}
     * Content-Type: application/json
     * Header: Authorization: token
     * Body: { "prgmDetails":String, "prgmIntro":String, "prgmName":String, "serviceRegion":String, "theme":String }
     
-  9. 생태 관광지 중에 서비스 지역 컬럼에서 특정 지역에서 진행되는 프로그램명과 테마를 출력하는 API
+10. 생태 관광지 중에 서비스 지역 컬럼에서 특정 지역에서 진행되는 프로그램명과 테마를 출력하는 API
     * POST /search/region
     * Content-Type: application/json
     * Header: Authorization: token
     * Body: { "region":String }
     
-  10. 생태 정보 데이터에 프로그램 소개 컬럼에서 특정 문자열이 포함된 레코드에서 서비스 지역 개수를 세어 출력하는 API
+11. 생태 정보 데이터에 프로그램 소개 컬럼에서 특정 문자열이 포함된 레코드에서 서비스 지역 개수를 세어 출력하는 API
     * POST /search/keyword
     * Content-Type: application/json
     * Header: Authorization: token
     * Body: { "keyword":String }
     
-  11. 모든 레코드에 프로그램 상세 정보를 읽어와서 입력 단어의 출현빈도수를 계산하여 출력 하는 API
+12. 모든 레코드에 프로그램 상세 정보를 읽어와서 입력 단어의 출현빈도수를 계산하여 출력 하는 API
     * POST /search/keywordCount
     * Content-Type: application/json
     * Header: Authorization: token
