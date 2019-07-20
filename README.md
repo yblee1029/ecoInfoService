@@ -39,6 +39,7 @@
  * 해당 프로젝트에서 gradle bootRun 실행
  * 또는, 빌드 완료 후 java -jar ./build/libs/ecoInfoService-0.0.1-SNAPSHOT.jar --server.port=[PORT] 실행
  * 빌드 불가 시, https://github.com/yblee1029/jar 해당 경로에서 jar 파일을 다운로드 받을수 있음
+ * DB 확인: http://localhost:8080/h2-console
 ---
 
 **4. API 정보**
