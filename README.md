@@ -32,7 +32,8 @@
  * 추가 제약사항(옵션): 완료    
 
 2. 빌드
- * gradle build
+ * Linux: gradle build
+ * Window: gradlew build
 
 3. 실행 방법
  * PORT는 8080으로 설정 되어있음
