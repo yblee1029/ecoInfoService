@@ -41,7 +41,7 @@
  * 빌드 불가 시, https://github.com/yblee1029/jar 해당 경로에서 jar 파일을 다운로드 받을수 있음
 ---
 
-**4. API **
+**4. API 정보**
 1. JWT 발급 후 Header의 Authorization에 Token 값을 넣어서 API를 호출을 해야 함  
 
 2. JWT signup 계정 생성 API
